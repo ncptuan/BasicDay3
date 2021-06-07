@@ -13,6 +13,7 @@
 		0435DC9E266A6C95008DF34D /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435DC9D266A6C95008DF34D /* BaseTabBarController.swift */; };
 		0435DCA0266A6CD8008DF34D /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435DC9F266A6CD8008DF34D /* CustomTabBar.swift */; };
 		04BE3F14266C6EBA009A3A67 /* TabBarModVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BE3F13266C6EBA009A3A67 /* TabBarModVIew.swift */; };
+		04DBFFDF266E4F7D00754E21 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DBFFDE266E4F7D00754E21 /* DetailViewController.swift */; };
 		04E643A22669DCF2006E0E9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E643A12669DCF2006E0E9E /* AppDelegate.swift */; };
 		04E643A42669DCF2006E0E9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E643A32669DCF2006E0E9E /* SceneDelegate.swift */; };
 		04E643A62669DCF2006E0E9E /* IndexController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E643A52669DCF2006E0E9E /* IndexController.swift */; };
@@ -28,6 +29,7 @@
 		0435DC9D266A6C95008DF34D /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		0435DC9F266A6CD8008DF34D /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		04BE3F13266C6EBA009A3A67 /* TabBarModVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModVIew.swift; sourceTree = "<group>"; };
+		04DBFFDE266E4F7D00754E21 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		04E6439E2669DCF2006E0E9E /* Basic3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Basic3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E643A12669DCF2006E0E9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E643A32669DCF2006E0E9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				0435DC98266A6B74008DF34D /* NotificationController.swift */,
 				04E643A52669DCF2006E0E9E /* IndexController.swift */,
 				0435DC9A266A6B8A008DF34D /* InfoController.swift */,
+				04DBFFDE266E4F7D00754E21 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				0435DC9B266A6B8A008DF34D /* InfoController.swift in Sources */,
 				0435DCA0266A6CD8008DF34D /* CustomTabBar.swift in Sources */,
 				04E643A22669DCF2006E0E9E /* AppDelegate.swift in Sources */,
+				04DBFFDF266E4F7D00754E21 /* DetailViewController.swift in Sources */,
 				0435DC97266A658D008DF34D /* TabItems.swift in Sources */,
 				04E643A42669DCF2006E0E9E /* SceneDelegate.swift in Sources */,
 			);

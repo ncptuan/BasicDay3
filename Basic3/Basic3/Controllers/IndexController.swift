@@ -9,7 +9,7 @@ import UIKit
 
 class IndexController: UIViewController {
 
-    @IBOutlet weak var txtFullName: UITextField!
+    @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtAccount: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +18,6 @@ class IndexController: UIViewController {
         let image = UIImage(named: "Header")
         if let navBackgroundImage = image?.resizableImage(withCapInsets: .zero, resizingMode: .stretch) {
             navigationController?.navigationBar.setBackgroundImage(navBackgroundImage, for: .default)
-            
             let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             navigationController?.navigationBar.titleTextAttributes = textAttributes
         }
@@ -28,19 +27,16 @@ class IndexController: UIViewController {
         return .lightContent;
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        navigationItem.backBarButtonItem = BarBackButton()
-//
-//        let detailSC = segue.destination as! DetailViewController
-//        let helloStr = getHelloStr()
-//        if helloStr.isEmpty == false {
-//            detailSC.helloStr = helloStr
-//        }
-//
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailSC = segue.destination as! DetailViewController
+        let helloStr = getHelloStr()
+        if helloStr.isEmpty == false {
+            detailSC.displayUser = helloStr
+        }
+    }
     
     func getHelloStr() -> String {
-        guard let fullname = txtFullName.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return "" }
+        guard let fullname = txtName.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return "" }
         guard let account = txtAccount.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return "" }
         if fullname.isEmpty && account.isEmpty {
             return ""

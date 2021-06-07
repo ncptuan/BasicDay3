@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eXp-EV-lIH" userLabel="FunctionGroup">
-                                <rect key="frame" x="0.0" y="238" width="414" height="152"/>
+                                <rect key="frame" x="0.0" y="366" width="414" height="164"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="bFm-gF-IXk" userLabel="TextFieldGroup">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
@@ -37,19 +37,22 @@
                                         <edgeInsets key="layoutMargins" top="10" left="30" bottom="8" right="30"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8xx-3U-vNh">
-                                        <rect key="frame" x="0.0" y="108" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="108" width="414" height="56"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBv-yI-Tnv">
-                                                <rect key="frame" x="100" y="8" width="214" height="28"/>
+                                                <rect key="frame" x="100" y="8" width="214" height="40"/>
                                                 <color key="backgroundColor" name="AccentColor"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                 <state key="normal" title="Go to details">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <segue destination="022-0Q-AM7" kind="show" id="jNp-Cp-YNV"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="aBv-yI-Tnv" firstAttribute="height" secondItem="8xx-3U-vNh" secondAttribute="height" multiplier="0.25" constant="17" id="Lxe-tU-JVJ"/>
+                                            <constraint firstItem="aBv-yI-Tnv" firstAttribute="height" secondItem="8xx-3U-vNh" secondAttribute="height" multiplier="0.25" constant="26" id="Lxe-tU-JVJ"/>
                                         </constraints>
                                         <edgeInsets key="layoutMargins" top="8" left="100" bottom="8" right="100"/>
                                     </stackView>
@@ -59,14 +62,12 @@
                         <viewLayoutGuide key="safeArea" id="7DZ-jk-Itn"/>
                         <color key="backgroundColor" name="Teal"/>
                         <constraints>
-                            <constraint firstItem="eXp-EV-lIH" firstAttribute="top" secondItem="7DZ-jk-Itn" secondAttribute="top" constant="150" id="CTg-Nb-8AN"/>
+                            <constraint firstItem="eXp-EV-lIH" firstAttribute="centerY" secondItem="oZT-Mp-ahv" secondAttribute="centerY" id="CTg-Nb-8AN"/>
                             <constraint firstItem="7DZ-jk-Itn" firstAttribute="trailing" secondItem="eXp-EV-lIH" secondAttribute="trailing" id="yEJ-xO-I5U"/>
-                            <constraint firstItem="eXp-EV-lIH" firstAttribute="leading" secondItem="7DZ-jk-Itn" secondAttribute="leading" id="zq7-n8-c5J"/>
+                            <constraint firstItem="eXp-EV-lIH" firstAttribute="centerX" secondItem="oZT-Mp-ahv" secondAttribute="centerX" id="zq7-n8-c5J"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Index" image="IndexDisable" selectedImage="IndexEnable" id="6W9-kL-TyB">
-                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="Index" image="IndexDisable" selectedImage="IndexEnable" id="6W9-kL-TyB"/>
                     <navigationItem key="navigationItem" title="Index" id="y1x-iR-AyW">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="magnifyingglass" catalog="system" id="HaI-zI-Pal">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,13 +82,52 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
-                        <outlet property="txtAccount" destination="9ly-3z-Uld" id="FZ5-xi-P2H"/>
-                        <outlet property="txtFullName" destination="eYF-LP-Bnx" id="fRF-Iv-Rn3"/>
+                        <outlet property="txtAccount" destination="9ly-3z-Uld" id="pfy-sL-CPD"/>
+                        <outlet property="txtName" destination="eYF-LP-Bnx" id="hWq-f4-zsk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfo-4b-dnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1886.9565217391305" y="1109.5982142857142"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="DNA-e5-21c">
+            <objects>
+                <viewController id="022-0Q-AM7" customClass="DetailViewController" customModule="Basic3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9kU-Lp-iUb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="frm-PD-LVk">
+                                <rect key="frame" x="118" y="426.5" width="178" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Display base on code&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPd-D8-TvQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="178" height="43.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BqP-f6-4FV"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="frm-PD-LVk" firstAttribute="centerX" secondItem="9kU-Lp-iUb" secondAttribute="centerX" id="fAD-nR-raO"/>
+                            <constraint firstItem="frm-PD-LVk" firstAttribute="height" secondItem="BqP-f6-4FV" secondAttribute="height" multiplier="0.06" id="nJZ-4U-YJb"/>
+                            <constraint firstItem="frm-PD-LVk" firstAttribute="centerY" secondItem="9kU-Lp-iUb" secondAttribute="centerY" id="p1x-G5-dCj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="gtn-UD-4ix">
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="G8K-bB-7xw"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="userLabel" destination="dPd-D8-TvQ" id="de7-qu-dqo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tah-k3-NRA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2864" y="1110"/>
         </scene>
         <!--Tab Bar Mod View Controller-->
         <scene sceneID="O3s-cm-50i">
@@ -97,6 +137,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O6A-HB-CMx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -112,21 +153,30 @@
         <!--Info-->
         <scene sceneID="rPU-Zn-Z6l">
             <objects>
-                <viewController id="VJi-DY-cjp" customClass="NotificationController" customModule="Basic3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VJi-DY-cjp" customClass="InfoController" customModule="Basic3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lHD-Aw-Yh8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TR-xQ-NAL">
-                                <rect key="frame" x="173" y="433" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="BBBBBBB">
-                                    <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ybW-r3-99C">
+                                <rect key="frame" x="191" y="426.5" width="32" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqF-OI-ARS">
+                                        <rect key="frame" x="0.0" y="0.0" width="32" height="43.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zjD-u9-2fK"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="ybW-r3-99C" firstAttribute="centerX" secondItem="lHD-Aw-Yh8" secondAttribute="centerX" id="4vf-NZ-soB"/>
+                            <constraint firstItem="ybW-r3-99C" firstAttribute="height" secondItem="zjD-u9-2fK" secondAttribute="height" multiplier="0.06" id="CCg-QZ-MdF"/>
+                            <constraint firstItem="ybW-r3-99C" firstAttribute="centerY" secondItem="lHD-Aw-Yh8" secondAttribute="centerY" id="uqJ-ub-9OW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Info" image="InfoDisable" selectedImage="InfoEnable" id="EsF-zM-oAc">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,22 +191,49 @@
         <!--Notification-->
         <scene sceneID="Thw-Mh-Q1m">
             <objects>
-                <viewController id="KWv-d0-5BD" customClass="InfoController" customModule="Basic3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KWv-d0-5BD" customClass="NotificationController" customModule="Basic3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2gu-gH-K0G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="W8w-4z-0Vj">
+                                <rect key="frame" x="124" y="421" width="166" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rj2-xV-mbE">
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Go to Details">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="022-0Q-AM7" kind="show" id="Wkw-T6-2ex"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DBa-WD-ZWn"/>
-                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W8w-4z-0Vj" firstAttribute="centerX" secondItem="2gu-gH-K0G" secondAttribute="centerX" id="62k-N8-iBB"/>
+                            <constraint firstItem="W8w-4z-0Vj" firstAttribute="height" secondItem="DBa-WD-ZWn" secondAttribute="height" multiplier="0.075" id="ctm-Hn-7PX"/>
+                            <constraint firstItem="W8w-4z-0Vj" firstAttribute="width" secondItem="DBa-WD-ZWn" secondAttribute="width" multiplier="0.4" id="gGV-S7-nR6"/>
+                            <constraint firstItem="W8w-4z-0Vj" firstAttribute="centerY" secondItem="2gu-gH-K0G" secondAttribute="centerY" id="img-mV-anm"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Notification" image="NotificationDisable" selectedImage="NotificationEnable" id="FQU-i1-seT">
                         <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Notification" id="hAl-gZ-QGj"/>
+                    <navigationItem key="navigationItem" title="Notification" id="hAl-gZ-QGj">
+                        <barButtonItem key="leftBarButtonItem" image="magnifyingglass" catalog="system" id="NFn-tl-cjF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="9Wx-qv-2dH"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg9-XJ-4Ee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1833" y="370"/>
+            <point key="canvasLocation" x="1887" y="376"/>
         </scene>
         <!--Item-->
         <scene sceneID="jbT-Wk-brA">
@@ -216,6 +293,9 @@
             <point key="canvasLocation" x="935" y="370"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Wkw-T6-2ex"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="IndexDisable" width="36" height="36"/>
         <image name="IndexEnable" width="36" height="36"/>
@@ -225,6 +305,7 @@
         <image name="NotificationEnable" width="36" height="36"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,6 +313,9 @@
         <namedColor name="Teal">
             <color red="0.22499999403953552" green="0.74800002574920654" blue="0.95399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -14,6 +14,14 @@ class NotificationController: UIViewController {
         // Do any additional setup after loading the view.
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailSC = segue.destination as! DetailViewController
+        let helloStr = "Connect from Notication"
+        if helloStr.isEmpty == false {
+            detailSC.displayUser = helloStr
+        }
+    }
 
 
 }

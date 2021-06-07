@@ -20,19 +20,19 @@ class TabBarModViewController: UITabBarController, UINavigationControllerDelegat
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        guard let font = UIFont(name: "HelveticaNeue-Bold", size: 12) else { return }
+//        guard let font = UIFont(name: "HelveticaNeue-Bold", size: 12) else { return }
         
-        resetTabBarStyle()
-        item.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+//        resetTabBarStyle()
+//        item.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
     }
     
-    private func resetTabBarStyle() {
-        guard let font = UIFont(name: "HelveticaNeue", size: 12) else { return }
-        guard let items = tabBar.items else { return }
-        
-        for item in items {
-            item.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
-        }
-    }
+//    private func resetTabBarStyle() {
+//        guard let font = UIFont(name: "HelveticaNeue", size: 12) else { return }
+//        guard let items = tabBar.items else { return }
+//
+//        for item in items {
+//            item.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+//        }
+//    }
 
 }
