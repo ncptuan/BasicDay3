@@ -21,6 +21,7 @@ class IndexController: UIViewController {
             let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
             navigationController?.navigationBar.titleTextAttributes = textAttributes
         }
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle{

@@ -12,7 +12,7 @@ class NotificationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
